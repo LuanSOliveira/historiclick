@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { APP_ROUTES } from "../../../constants/route";
 
@@ -10,6 +10,10 @@ interface Props {
 
 const HistoryPageContainer = ({ children, chapter }: Props) => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="h-full w-full flex flex-col gap-6 p-5 md:px-20 lg:px-30 xl:px-35 2xl:px-40">

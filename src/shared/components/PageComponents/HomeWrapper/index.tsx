@@ -29,7 +29,7 @@ const HomeWrapper = () => {
 
   return (
     <div
-      className="relative w-screen h-screen overflow-hidden "
+      className="relative w-screen min-h-screen"
       style={{ perspective: 1200 }}
     >
       <AnimatePresence mode="wait">
@@ -40,7 +40,7 @@ const HomeWrapper = () => {
           animate="in"
           exit="out"
           transition={pageTransition}
-          className="absolute w-full h-full"
+          className="w-full h-full"
         >
           <Outlet />
         </motion.div>
