@@ -12,11 +12,6 @@ const pageVariants = {
     opacity: 1,
     transformOrigin: "left center",
   },
-  // out: {
-  //   rotateY: -90,
-  //   opacity: 0,
-  //   transformOrigin: "left center",
-  // },
 };
 
 const pageTransition = {
