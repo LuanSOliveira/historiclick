@@ -1,36 +1,33 @@
 import HistoryPageContainer from "../../../shared/components/Container/HistoryPageContainer";
 import OptionContainer from "../../../shared/components/Container/OptionContainer";
 import CharacterSpeech from "../../../shared/components/PageComponents/CharacterSpeech";
+import { APP_ROUTES } from "../../../shared/constants/route";
 
 const Page1_1 = () => {
   return (
-    <HistoryPageContainer chapter="Enfrentando Tiago">
-      <p>Samuel respira fundo e chama Tiago para conversar no intervalo.</p>
-
-      <CharacterSpeech
-        character={"Samuel"}
-        speech={"Foi você que postou aquilo no FalaAí? Por quê?"}
-      />
+    <HistoryPageContainer chapter="Capítulo 2: Primeiras Ações">
+      <p>Samuel confronta Tiago no intervalo</p>
       <CharacterSpeech
         character={"Tiago"}
-        action="(rindo, depois sério)"
-        speech={"Eu só quis zoar... Não achei que fosse dar nisso tudo."}
+        speech={"Foi só uma brincadeira... Não achei que ia dar problema."}
       />
-      <p>Samuel fica dividido.</p>
-      <OptionContainer
-        optionTitle={"2.1 Denunciar Tiago para a direção"}
-        route={""}
-        text={
-          "Samuel acredita que precisa de justiça, mesmo que Tiago seja punido."
-        }
+      <CharacterSpeech
+        character={"Samuel"}
+        speech={"Isso me prejudicou muito. E agora?"}
       />
       <OptionContainer
-        optionTitle={
-          "2.2 Tentar convencer Tiago a contar a verdade publicamente."
-        }
-        route={""}
-        text={"Samuel quer resolver sem punições severas."}
+        optionTitle={"Denunciar Tiago para a direção."}
+        route={APP_ROUTES.naTeiaDoBoato["2_1"]}
+        lastPass="2_1"
+        text={"Samuel quer justiça, mesmo que haja punição."}
       />
+      <OptionContainer
+        optionTitle={"Pedir que Tiago conte a verdade publicamente."}
+        route={APP_ROUTES.naTeiaDoBoato["2_2"]}
+        lastPass="2_2"
+        text={"Prefere resolver sem punições, apostando no diálogo."}
+      />
+      {/* <BackButton /> */}
     </HistoryPageContainer>
   );
 };

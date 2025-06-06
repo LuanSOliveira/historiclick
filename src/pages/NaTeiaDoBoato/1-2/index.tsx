@@ -1,37 +1,33 @@
 import HistoryPageContainer from "../../../shared/components/Container/HistoryPageContainer";
 import OptionContainer from "../../../shared/components/Container/OptionContainer";
 import CharacterSpeech from "../../../shared/components/PageComponents/CharacterSpeech";
+import { APP_ROUTES } from "../../../shared/constants/route";
 
 const Page1_2 = () => {
   return (
-    <HistoryPageContainer chapter="Buscando Apoio">
-      <p>
-        Samuel conta tudo para Ana e Pedro. Eles ficam indignados e prometem
-        ajudar.
-      </p>
-
+    <HistoryPageContainer chapter="Capítulo 2: Primeiras Ações">
+      <p>Ana e Pedro escutam tudo e querem ajudar.</p>
       <CharacterSpeech
         character={"Ana"}
-        speech={
-          "Vamos fazer um vídeo com depoimentos mostrando quem você realmente é."
-        }
+        speech={"Vamos fazer um vídeo mostrando quem você realmente é."}
       />
       <CharacterSpeech
         character={"Pedro"}
-        speech={
-          "Ou podemos tentar rastrear quem postou, dá pra ver os IPs com o professor de informática."
-        }
+        speech={"Ou podemos investigar de onde veio essa postagem."}
       />
       <OptionContainer
-        optionTitle={"2.3 Aceitar fazer um vídeo com apoio dos amigos."}
-        route={""}
-        text={"Samuel aposta na força da verdade e da imagem positiva."}
+        optionTitle={"Fazer um vídeo com apoio dos amigos."}
+        route={APP_ROUTES.naTeiaDoBoato["2_3"]}
+        lastPass="2_3"
+        text={"Apostar na força da verdade."}
       />
       <OptionContainer
-        optionTitle={"2.4 Investigar a origem da postagem com ajuda técnica."}
-        route={""}
-        text={"Samuel quer provas para confrontar quem mentiu."}
+        optionTitle={"Investigar quem fez a postagem."}
+        route={APP_ROUTES.naTeiaDoBoato["2_4"]}
+        lastPass="2_4"
+        text={"Buscar provas com o professor de informática."}
       />
+      {/* <BackButton /> */}
     </HistoryPageContainer>
   );
 };

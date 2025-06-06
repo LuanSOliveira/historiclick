@@ -8,19 +8,18 @@ const Page1 = () => {
       <p className="text-justify">Você é Samuel. O que faz?</p>
       <div className="w-full mt-5 flex flex-col gap-10">
         <OptionContainer
-          optionTitle={
-            "1.1 Samuel decide enfrentar o agressor e perguntar por que ele fez isso."
-          }
+          optionTitle={"Enfrentar quem espalhou o boato."}
           route={APP_ROUTES.naTeiaDoBoato["1_1"]}
-          text={"Vai até Tiago, que ele desconfia ser o autor do boato."}
+          lastPass="1_1"
+          text={"Samuel vai até Tiago, de quem ele desconfia."}
         />
         <OptionContainer
-          optionTitle={
-            "1.2 Samuel escolhe se abrir com seus amigos sobre o que aconteceu, buscando apoio e conselhos."
-          }
+          optionTitle={"Pedir ajuda aos amigos."}
           route={APP_ROUTES.naTeiaDoBoato["1_2"]}
-          text={"Conversa com Ana e Pedro, seus amigos mais próximos."}
+          lastPass="1_2"
+          text={"Conversa com Ana e Pedro, buscando apoio."}
         />
+        {/* <BackButton /> */}
       </div>
     </HistoryPageContainer>
   );

@@ -1,14 +1,25 @@
 import { Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { useNavigate } from "react-router-dom";
+import { useLastPassStore } from "../../../../store/NaTeiaDoBoato/lastPassStore";
 
 interface Props {
   route: string;
   text: string;
+  lastPass?: string;
 }
 
-const ChoiceButton = ({ route, text }: Props) => {
+const ChoiceButton = ({ route, text, lastPass }: Props) => {
   const navigate = useNavigate();
+  const setLastPass = useLastPassStore((state) => state.setLastPass);
+
+  function OnClickButton() {
+    if (lastPass) {
+      setLastPass(lastPass);
+    }
+    navigate(route);
+  }
+
   return (
     <Button
       variant="outlined"
@@ -16,7 +27,7 @@ const ChoiceButton = ({ route, text }: Props) => {
       color="inherit"
       fullWidth
       size="small"
-      onClick={() => navigate(route)}
+      onClick={() => OnClickButton()}
     >
       {text}
     </Button>

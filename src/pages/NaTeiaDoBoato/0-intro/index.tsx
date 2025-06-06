@@ -40,9 +40,17 @@ const NaTeiaDoBoatoIntroPage = () => {
             começaram a tratá-lo com desconfiança, e Samuel, sem entender, viu
             sua vida virar de cabeça para baixo.
           </p>
+          <div className="w-full flex justify-center">
+            <img
+              src={APP_IMAGES.naTeiaDoBoato.intro}
+              alt="Imagem de Introdução"
+              className="border-2 border-paleta-2 h-100 w-100 lg:h-140 lg:w-140"
+            />
+          </div>
           <div className="w-full mt-5">
             <ChoiceButton
               route={APP_ROUTES.naTeiaDoBoato[1]}
+              lastPass="intro"
               text="Continuar"
             />
           </div>
